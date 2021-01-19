@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Svetlana Kuznetsova](https://up.htmlacademy.ru/htmlcss/30/user/1534105).
-* Наставник: `Неизвестно`.
+* Наставник: `Никита Романенко` (https://htmlacademy.ru/profile/id1449189).
 
 ---
 
