@@ -40,23 +40,15 @@
       </nav>
     </header>
     <main>
-      <ul>
-        <li>
-          <a href="index.html">
-            <img src="">
-          </a>
-        </li>
-        <li>
-          <a href="catalog.html">Каталог</a>
-        </li>
-        <li>
-          <a href="blank.html">Инструменты</a>
-        </li>
-        <li>
-          Перфораторы
-        </li>
-      </ul>
-      <p>Перфораторы</p>
+      <div class="breadcumbs">
+        <a href="index.html">
+          <img src="" alt="Главная">
+        </a>
+        <a href="">Каталог</a>
+        <a href="">Инструмент</a>
+        <a href="">Перфораторы</a>
+      </div>
+      <h1>Перфораторы</h1>
       <section>
         <h2>Фильтр:</h2>
         <form method="get" action="https://echo.htmlacademy.ru">
@@ -65,41 +57,30 @@
           </fieldset>
           <fieldset>
             <legend>Производители:</legend>
-            <ul>
-              <li>
-                <input type="checkbox" name="bosch" id="filter-bosch" checked>
-                <label for="filter-bosch">Bosch</label>
-              </li>
-              <li>
-                <input type="checkbox" name="interskol" id="filter-interskol">
-                <label for="filter-interskol">Интерскол</label>
-              </li>
-              <li>
-                <input type="checkbox" name="makita" id="filter-makita" checked>
-                <label for="filter-makita">Makita</label>
-              </li>
-              <li>
-                <input type="checkbox" name="dewalt" id="filter-dewalt">
-                <label for="filter-dewalt">Dewalt</label>
-              </li>
-              <li>
-                <input type="checkbox" name="hitachi" id="filter-hitachi">
-                <label for="filter-hitachi">Hitachi</label>
-              </li>
-            </ul>
+              <label>
+                <input type="checkbox" name="bosch" id="filter-bosch" checked>Bosch
+              </label>
+              <label>
+                <input type="checkbox" name="interskol" id="filter-interskol">Интерскол
+              </label>
+              <label>
+                <input type="checkbox" name="makita" id="filter-makita" checked>Makita
+              </label>
+              <label>
+                <input type="checkbox" name="dewalt" id="filter-dewalt">Dewalt
+              </label>
+              <label>
+                <input type="checkbox" name="hitachi" id="filter-hitachi">Hitachi
+              </label>
           </fieldset>
           <fieldset>
             <legend>Питание:</legend>
-            <ul>
-              <li>
-                <input type="radio" name="power" value="battery-power" id="filter-battery-power" checked>
-                <label for="filter-battery-power">Аккумуляторные</label>
-              </li>
-              <li>
-                <input type="radio" name="power" value="mains-power" id="filter-mains-power">
-                <label for="filter-mains-power">Сетевые</label>
-              </li>
-            </ul>
+              <label>
+                <input type="radio" name="power" value="battery-power" id="filter-battery-power" checked>Аккумуляторные
+              </label>
+              <label>
+                <input type="radio" name="power" value="mains-power" id="filter-mains-power">Сетевые
+              </label>
           </fieldset>
           <button type="submit">Показать</button>
         </form>
@@ -163,20 +144,12 @@
           <p>Перфоратор BOSCH BFG 2000</p>
           <p>12500 р.</p>
         </a>
-        <ul>
-          <li>
-            <a>1</a>
-          </li>
-          <li>
-            <a href="#">2</a>
-          </li>
-          <li>
-            <a href="#">3</a>
-          </li>
-          <li>
-            <a href="#">Следующая</a>
-          </li>
-        </ul>
+        <div class="pagination">
+          <a>1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">Следующая</a>
+        </div>
       </section>
       <section>
         <h2>Пара слов о перфораторах</h2>
