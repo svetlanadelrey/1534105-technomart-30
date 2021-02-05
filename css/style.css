@@ -1,0 +1,393 @@
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/cuprum.woff2"), url("../fonts/cuprum.woff");
+}
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/cuprumbold.woff2"), url("../fonts/cuprumbold.woff");
+}
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 700;
+  font-style: italic;
+  src: url("../fonts/cuprumbolditalic.woff2"), url("../fonts/cuprumbolditalic.woff");
+}
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 400;
+  font-style: italic;
+  src: url("../fonts/cuprumitalic.woff2"), url("../fonts/cuprumitalic.woff");
+}
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/ptsans.woff2"), url("../fonts/ptsans.woff");
+}
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/ptsansbold.woff2"), url("../fonts/ptsansbold.woff");
+}
+
+:root {
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --basic-red: #EE3643;
+  --basic-green: #63A63E;
+  --basic-navy: #293449;
+  --basic-dark-blue: #32425C;
+  --basic-gray: #F1F5F7;
+
+
+  --special-gray-pink: #F9F5F0;
+  --special-orange: #FFBF47;
+  --special-blue: #3BBCE3;
+  --special-lilac: #DC91D8;
+  --special-light-green: #8ED78F;
+  --special-light-orange: #FFC047;
+  --special-extra-light-orange: #FFD180;
+  --special-blue-gray: #F2F6F8;
+  --special-filter-gray: #F7F3EC;
+  --special-old-price-gray: #A9A9A9;
+  --special-footer-adress-gray: #F3F7F9;
+  --special-click-red: #BA2732;
+  --special-focus-red: #CA2C37;
+  --special-focus-green: #5FBB2D;
+  --special-click-dark: #161D29;
+  --special-click-gray: #C5C5C5;
+  --special-click-navy: #1D2739;
+  --special-click-green: #518534;
+  --special-social-button: #212A3A;
+  --special-border-gray: #EAEAEA;
+}
+
+body {
+  min-width: 940px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-black);
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.header-logo {
+  background-color: var(--basic-red);
+}
+.header-logo:active {
+  background-color: var(--special-click-red);
+}
+.header-links-wrapper {
+  display: flex;
+  align-items: center;
+}
+.header-links {
+  background-color: var(--basic-navy);
+}
+.header-links a {
+  color: var(--basic-white);
+}
+.header-links input {
+  background-color: transparent;
+  border: none;
+}
+.header-links input:focus {
+  background-color: var(--basic-white);
+}
+.header-links a:active {
+  color: rgba(255, 255, 255, .5);
+}
+::placeholder {
+  color: var(--basic-white);
+  font-size: 18px;
+}
+.order-link {
+  background-color: var(--basic-green);
+}
+.order-link:hover {
+  background-color: var(--special-focus-green);
+}
+.bookmark-link:active {
+  background-color: var(--special-click-dark);
+}
+.header-row {
+  background-color: var(--special-footer-adress-gray);
+
+}
+.header-row-title {
+  color: var(--basic-red);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+}
+.header-phone a {
+  color: var(--basic-red);
+  font-size: 21px;
+  font-weight: 700;
+}
+.header-phone {
+  border: 3px solid var(--basic-white);
+}
+.user-button {
+  color: var(--basic-black);
+  font-size: 21px;
+  border: none;
+  background-color:rgba(255, 255, 255, .9);
+}
+.user-button:hover {
+  color: var(--basic-red);
+}
+.user-button:active {
+  color: var(--special-click-gray);
+}
+.login-link {
+  width: 121px;
+  height: 45px;
+}
+.sign-up-link {
+  width: 150px;
+  height: 45px;
+}
+.header-navigation {
+  background-color: var(--basic-dark-blue);
+  width: 940px;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-navigation a {
+  color: var(--basic-white);
+}
+.header-navigation a:hover {
+  background-color: var(--basic-navy);
+}
+.header-navigation a:active {
+  background-color: var(--special-click-navy);
+  color: rgba(255, 255, 255, .5);
+}
+.main-navigation {
+  color: var(--basic-white);
+}
+.main-navigation h3 {
+  font-size: 24px;
+  font-weight: 400;
+}
+.main-navigation a {
+  color: var(--basic-white);
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.main-navigation a:hover {
+  background-color:rgba(197,197,197,.3);
+}
+.main-navigation a:active {
+  background-color: rgba(169,169,169,.3);
+}
+.main-navigation-item {
+  width: 300px;
+  height: 123px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.main-navigation-item a {
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, .3);
+}
+.item-materials {
+  background-color: var(--special-orange);
+}
+.item-tools {
+  background-color: var(--special-blue);
+}
+.item-equipment {
+  background-color: var(--special-lilac);
+}
+.item-discounts {
+  background-color: var(--special-light-green);
+}
+.item-delivery {
+  background-color: var(--special-light-orange);
+}
+.item-drills {
+  background-image: url("../img/worker-1.jpg");
+  width: 620px;
+  height: 266px;
+}
+.item-drills-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.bestseller-list-wrapper {
+  display: flex;
+}
+.bestseller-header, .brands-header {
+  background-color: var(--special-gray-pink);
+}
+.bestseller-header h2, .brands-header h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.bestseller-item {
+  width: 220px;
+  height: 318px;
+  border: 1px solid var(--special-border-gray);
+}
+.bestseller-item a {
+  color: var(--basic-black);
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.old-price {
+  color: var(--special-old-price-gray);
+  font-size: 17px;
+  font-weight: 700;
+}
+.price-button {
+  width: 141px;
+  height: 38px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  font-size: 17px;
+  font-weight: 700;
+}
+.services {
+  font-size: 13px;
+  line-height: 24px;
+  background-color: var(--basic-gray);
+  width: 1200px;
+  height: 522px;
+}
+.services-slider {
+  display: flex;
+}
+.services-buttons {
+  display: flex;
+  flex-direction: column;
+}
+.services-button {
+  width: 240px;
+  height: 61px;
+  border: none;
+  color: var(--basic-white);
+  font-size: 21px;
+  font-weight: 700;
+}
+.services-button:hover {
+  background-color: var(--basic-navy);
+}
+.services-button:active {
+  background-color: var(--basic-white);
+}
+.active-button {
+  color: var(--basic-dark-blue);
+  background-color: var(--basic-white);
+}
+.inactive-button {
+  color: var(--basic-white);
+  background-color: var(--basic-dark-blue);
+}
+.services h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.services-description h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.services-image {
+  background-image: url("../img/delivery.png");
+  width: 468px;
+  height: 261px;
+}
+.advantages {
+  font-size: 13px;
+  line-height: 24px;
+}
+.advantages-title {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.contacts h2 {
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.contacts p {
+  font-size: 13px;
+  line-height: 24px;
+}
+.red-button {
+  background-color: var(--basic-red);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  font-size: 14px;
+  font-weight: 400;
+}
+.red-button:hover {
+  background-color: var(--special-focus-red);
+}
+.red-button:active {
+  background-color: var(--special-click-red);
+}
+.footer-navigation-wrapper {
+  background-color: var(--basic-dark-blue);
+  color: var(--basic-white);
+  font-size: 18px;
+}
+.footer-logo {
+  background-color: var(--basic-red);
+}
+.footer-navigation a {
+  color: var(--basic-white);
+  text-decoration: none;
+}
+.footer-navigation a:hover {
+  text-decoration: underline;
+}
+.footer-navigation a:active {
+  opacity: 0.5;
+  text-decoration: none;
+}
+.footer-main-navigation a {
+  color: var(--special-extra-light-orange);
+}
+.footer-social-wrapper {
+  background-color: var(--basic-navy);
+  color: var(--basic-white);
+  font-size: 16px;
+
+}
+.footer-link {
+  color: var(--special-extra-light-orange);
+  text-decoration: none;
+}
+.social-button path:hover, .social-button path:active {
+  fill: var(--basic-red);
+}
+.footer-link:hover {
+  text-decoration: underline;
+}
+.footer-link:active {
+  text-decoration: none;
+  color: var(--basic-red);
+}
