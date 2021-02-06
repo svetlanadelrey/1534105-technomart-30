@@ -65,6 +65,7 @@
   --special-click-green: #518534;
   --special-social-button: #212A3A;
   --special-border-gray: #EAEAEA;
+  --special-filter-border: #E5E5E5;
 }
 
 body {
@@ -120,12 +121,26 @@ img {
 .order-link:hover {
   background-color: var(--special-focus-green);
 }
+.basket-link {
+  background-color: var(--basic-red);
+}
 .bookmark-link:active {
   background-color: var(--special-click-dark);
 }
+.user-menu a {
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+  color: var(--basic-dark-blue);
+}
+.user-menu a:hover {
+  color: var(--basic-red);
+}
+.user-menu a:active{
+  color: var(--special-click-gray);
+}
 .header-row {
   background-color: var(--special-footer-adress-gray);
-
 }
 .header-row-title {
   color: var(--basic-red);
@@ -140,6 +155,11 @@ img {
 }
 .header-phone {
   border: 3px solid var(--basic-white);
+}
+.header-adress {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--basic-dark-blue);
 }
 .user-button {
   color: var(--basic-black);
@@ -240,17 +260,16 @@ img {
 .bestseller-header, .brands-header {
   background-color: var(--special-gray-pink);
 }
-.bestseller-header h2, .brands-header h2 {
-  font-size: 30px;
-  text-transform: uppercase;
-  font-weight: 400;
+
+.catalog-list {
+  font-family: "PT Sans", sans-serif;
 }
-.bestseller-item {
+.catalog-item {
   width: 220px;
   height: 318px;
   border: 1px solid var(--special-border-gray);
 }
-.bestseller-item a {
+.catalog-item a {
   color: var(--basic-black);
   font-size: 18px;
   font-weight: 700;
@@ -269,9 +288,25 @@ img {
   font-size: 17px;
   font-weight: 700;
 }
+.bookmark-button {
+  background-color: var(--basic-white);
+  color: var(--basic-dark-blue);
+  border: 3px solid var(--basic-green);
+  font-family: "Cuprum", sans-serif;
+  font-size: 14px;
+  font-weight: 18px;
+  text-transform: uppercase;
+}
+.buy-button {
+  background-color: var(--basic-green);
+  color: var(--basic-white);
+  border: none;
+  font-family: "Cuprum", sans-serif;
+  font-size: 14px;
+  font-weight: 18px;
+  text-transform: uppercase;
+}
 .services {
-  font-size: 13px;
-  line-height: 24px;
   background-color: var(--basic-gray);
   width: 1200px;
   height: 522px;
@@ -305,35 +340,11 @@ img {
   color: var(--basic-white);
   background-color: var(--basic-dark-blue);
 }
-.services h3 {
-  font-size: 30px;
-  text-transform: uppercase;
-}
-.services-description h3 {
-  font-size: 30px;
-  text-transform: uppercase;
-}
+
 .services-image {
   background-image: url("../img/delivery.png");
   width: 468px;
   height: 261px;
-}
-.advantages {
-  font-size: 13px;
-  line-height: 24px;
-}
-.advantages-title {
-  font-size: 30px;
-  text-transform: uppercase;
-}
-.contacts h2 {
-  font-size: 30px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-.contacts p {
-  font-size: 13px;
-  line-height: 24px;
 }
 .red-button {
   background-color: var(--basic-red);
@@ -390,4 +401,91 @@ img {
 .footer-link:active {
   text-decoration: none;
   color: var(--basic-red);
+}
+
+.breadcrumbs {
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.breadcrumbs a {
+  text-decoration: none;
+  color: var(--basic-black);
+}
+.catalog-filter {
+  font-family: "PT Sans", sans-serif;
+  text-transform: uppercase;
+}
+.filter-title {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+
+}
+.catalog-filter-button {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: 1px solid var(--special-filter-border);
+  background-color: var(--basic-white);
+
+}
+.sort-list {
+  display: flex;
+  list-style: none;
+  width: 700px;
+  height: 38px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: var(--special-filter-gray);
+}
+.sort-list a {
+  color: rgba(0,0,0,.3);
+  text-decoration: none;
+}
+.sort-item-current a {
+  color: var(--basic-red);
+}
+.sort-item a:hover {
+  color: var(--basic-black);
+}
+.catalog-items-description {
+  background-color: var(--basic-gray);
+
+}
+.page-description {
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+}
+.site-title {
+  font-family: "Cuprum", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.catalog-title {
+  background-color: var(--special-blue-gray);
+  height: 89px;
+}
+.pagination-list a {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid var(--special-filter-gray);
+}
+.pagination-item-current {
+  background-color: var(--basic-red);
+}
+.pagination-list a:hover {
+  border: 1px solid var(--special-click-gray);
+}
+.pagination-list a:active {
+  border: 1px solid var(--basic-red);
 }
