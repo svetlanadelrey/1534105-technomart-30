@@ -5,21 +5,14 @@ const feedbackForm = feedbackModal.querySelector(".feedback-form");
 const feedbackLogin = feedbackModal.querySelector(".feedback-name-input");
 const feedbackEmail = feedbackModal.querySelector(".feedback-email-input");
 
-let isStorageSupport = true;
-let storage = "";
-
-try {
-  storage = localStorage.getItem("name");
-} catch (err) {
-  isStorageSupport = false;
-}
+const storage = localStorage.getItem("name") || false;
 
 feedbackButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   feedbackModal.classList.add("modal-show");
   if (storage) {
     feedbackLogin.value = storage;
-    feedbackEmail.focus ();
+    feedbackEmail.focus();
   } else {
     feedbackLogin.focus();
   }
@@ -37,7 +30,7 @@ feedbackForm.addEventListener("submit", function (evt) {
   feedbackModal.classList.remove("modal-error");
   feedbackModal.classList.add("modal-error");
   } else {
-    if (isStorageSupport) {
+    if (storage) {
       localStorage.setItem("name", feedbackLogin.value);
     }
   }
