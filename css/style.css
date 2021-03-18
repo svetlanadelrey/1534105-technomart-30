@@ -192,7 +192,6 @@ img {
   color: var(--basic-white);
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
-  line-height: 24px;
   padding: 0;
 }
 
@@ -1726,6 +1725,7 @@ img {
   margin-right: 6px;
   text-align: center;
   line-height: 36px;
+  vertical-align: middle;
 }
 
 .pagination-item-next {
@@ -1873,11 +1873,11 @@ img {
 
 }
 
-.feedback-form input::placeholder, .feedback-form textarea::placeholder {
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder {
   color: var(--special-old-price-gray);
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
-  line-height: 24px;
   padding-left: 12px;
 }
 
