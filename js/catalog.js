@@ -1,7 +1,7 @@
-const buyButtons = document.querySelectorAll(".catalog__itemBuy");
-const addToCartModal = document.querySelector(".modal__addToCart");
-const addToCartClose = addToCartModal.querySelector(".modal__close");
-const modalContinue = addToCartModal.querySelector(".modal__addToCartContinue");
+const buyButtons = document.querySelectorAll(".buy-button");
+const addToCartModal = document.querySelector(".popup-cart");
+const addToCartClose = addToCartModal.querySelector(".modal-close");
+const modalContinue = addToCartModal.querySelector(".continue-button");
 
 buyButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
