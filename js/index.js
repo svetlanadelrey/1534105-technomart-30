@@ -1,14 +1,14 @@
-const feedbackButton = document.querySelector(".feedback__contactsButton");
-const feedbackModal = document.querySelector(".modal__feedback");
-const feedbackClose = feedbackModal.querySelector(".modal__close");
-const feedbackForm = feedbackModal.querySelector(".feedback__form");
-const feedbackLogin = feedbackModal.querySelector("#feedbackName");
-const feedbackEmail = feedbackModal.querySelector("#feedbackEmail");
+const feedbackButton = document.querySelector(".feedback-contacts-button");
+const feedbackModal = document.querySelector(".modal-feedback");
+const feedbackClose = feedbackModal.querySelector(".modal-close");
+const feedbackForm = feedbackModal.querySelector(".feedback-form");
+const feedbackLogin = feedbackModal.querySelector(".feedback-name-input");
+const feedbackEmail = feedbackModal.querySelector(".feedback-email-input");
 
 const storage = localStorage.getItem("name") || false;
 
-feedbackButton.addEventListener("click", function (e) {
-  e.preventDefault();
+feedbackButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
   feedbackModal.classList.add("modal-show");
   if (storage) {
     feedbackLogin.value = storage;
@@ -18,17 +18,17 @@ feedbackButton.addEventListener("click", function (e) {
   }
 });
 
-feedbackClose.addEventListener("click", function (e) {
-  e.preventDefault();
+feedbackClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
   feedbackModal.classList.remove("modal-show");
   feedbackModal.classList.remove("modal-error");
 });
 
-feedbackForm.addEventListener("submit", function (e) {
+feedbackForm.addEventListener("submit", function (evt) {
   if (!feedbackLogin.value || !feedbackEmail.value) {
-  e.preventDefault();
-  feedbackModal.classList.remove("modal-error");
-  feedbackModal.classList.add("modal-error");
+    evt.preventDefault();
+    feedbackModal.classList.remove("modal-error");
+    feedbackModal.classList.add("modal-error");
   } else {
     if (storage) {
       localStorage.setItem("name", feedbackLogin.value);
@@ -36,19 +36,19 @@ feedbackForm.addEventListener("submit", function (e) {
   }
 });
 
-window.addEventListener("keydown", function (e) {
-  if (e.keyCode === 27) {
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
     if (feedbackModal.classList.contains("modal-show")) {
-      e.preventDefault();
+      evt.preventDefault();
       feedbackModal.classList.remove("modal-show");
       feedbackModal.classList.remove("modal-error");
     }
   }
 });
 
-const prev = document.querySelector('.prev');
-const next = document.querySelector('.next');
-const slides = document.querySelectorAll('.promo__slide');
+const prev = document.querySelector('.right-slide');
+const next = document.querySelector('.left-slide');
+const slides = document.querySelectorAll('.item-drill');
 
 let i = 0;
 slides[i].style.display = 'none';
@@ -78,67 +78,82 @@ next.addEventListener("click", () => {
   slides[i].style.display = 'block';
 })
 
-const deliveryBtn = document.querySelector("#servicesDelivery");
-const guaranteeBtn = document.querySelector("#servicesGuarantee");
-const paymentBtn = document.querySelector("#servicesPayment");
-const tabButtons = document.querySelectorAll(".services__tab");
-const tabs = document.querySelectorAll(".services__tabContent");
-const tabDelivery = document.querySelector("#tabDelivery");
-const tabGuarantee = document.querySelector("#tabGuarantee");
-const tabCredit = document.querySelector("#tabCredit");
+const deliveryBtn = document.querySelectorAll(".services-button-delivery");
+const guaranteeBtn = document.querySelectorAll(".services-button-guarantee");
+const paymentBtn = document.querySelectorAll(".services-button-payment");
+const serviceSlides = document.querySelectorAll(".services-slider");
+const deliverySlide = document.querySelector(".delivery-slider");
+const guaranteeSlide = document.querySelector(".guarantee-slider");
+const creditSlide = document.querySelector(".credit-slider");
 
-deliveryBtn.addEventListener("click", () => {
-  tabs.forEach(tab => {
-    tab.classList.remove("services__tabContent-active");
+deliveryBtn.forEach(btn => btn.addEventListener("click", () => {
+  serviceSlides.forEach(slide => {
+    slide.classList.remove("services-slider-visible");
+    slide.classList.add("services-slider-hidden");
   })
-  tabButtons.forEach(button => {
-    button.classList.remove("services__tab-active");
-  })
-  tabDelivery.classList.add("services__tabContent-active")
-  deliveryBtn.classList.add("services__tab-active");
-});
+  deliverySlide.classList.remove("services-slider-hidden");
+  deliverySlide.classList.add("services-slider-visible");
+}))
 
-guaranteeBtn.addEventListener("click", () => {
-  tabs.forEach(tab => {
-    tab.classList.remove("services__tabContent-active");
+guaranteeBtn.forEach(btn => btn.addEventListener("click", () => {
+  serviceSlides.forEach(slide => {
+    slide.classList.remove("services-slider-visible");
+    slide.classList.add("services-slider-hidden");
   })
-  tabButtons.forEach(button => {
-    button.classList.remove("services__tab-active");
+  guaranteeSlide.classList.remove("services-slider-hidden");
+  guaranteeSlide.classList.add("services-slider-visible");
+}))
+
+paymentBtn.forEach(btn => btn.addEventListener("click", () => {
+  serviceSlides.forEach(slide => {
+    slide.classList.remove("services-slider-visible");
+    slide.classList.add("services-slider-hidden");
   })
-  tabGuarantee.classList.add("services__tabContent-active")
-  guaranteeBtn.classList.add("services__tab-active");
-})
+  creditSlide.classList.remove("services-slider-hidden");
+  creditSlide.classList.add("services-slider-visible");
+}))
 
 
-paymentBtn.addEventListener("click", () => {
-  tabs.forEach(tab => {
-    tab.classList.remove("services__tabContent-active");
-  })
-  tabButtons.forEach(button => {
-    button.classList.remove("services__tab-active");
-  })
-  tabCredit.classList.add("services__tabContent-active")
-  paymentBtn.classList.add("services__tab-active");
-})
+const mapLink = document.querySelector(".map-image");
+const mapPopup = document.querySelector(".modal-map");
+const mapClose = mapPopup.querySelector(".modal-close");
 
-const mapLink = document.querySelector(".about__mapImage");
-const mapPopup = document.querySelector(".modal__map");
-const mapClose = mapPopup.querySelector(".modal__close");
-
-mapLink.addEventListener("click", function (e) {
-  e.preventDefault();
+mapLink.addEventListener("click", function (evt) {
+  evt.preventDefault();
   mapPopup.classList.add("modal-show");
 });
-mapClose.addEventListener("click", function (e) {
-  e.preventDefault();
+mapClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
   mapPopup.classList.remove("modal-show");
 });
 
-window.addEventListener("keydown", function (e) {
-  if (e.keyCode === 27) {
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
     if (mapPopup.classList.contains("modal-show")) {
-      e.preventDefault();
+      evt.preventDefault();
       mapPopup.classList.remove("modal-show");
     }
   }
+});
+
+const buyButtons = document.querySelectorAll(".buy-button");
+const addToCartModal = document.querySelector(".popup-cart");
+const addToCartClose = addToCartModal.querySelector(".modal-close");
+const modalContinue = addToCartModal.querySelector(".continue-button");
+
+buyButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    addToCartModal.classList.add("modal-show")
+  })
+})
+
+addToCartClose.addEventListener("click", function (e) {
+  e.preventDefault();
+  addToCartModal.classList.remove("modal-show");
+});
+
+modalContinue.addEventListener("click", function (e) {
+  e.preventDefault();
+  addToCartModal.classList.remove("modal-show");
 });
