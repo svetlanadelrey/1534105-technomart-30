@@ -564,6 +564,11 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  box-shadow: inset 0px -5px 0px var(--basic-navy);
+  width: 940px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   padding: 0 23px;
 }
 
@@ -867,6 +872,8 @@ img {
   display: grid;
   grid-gap: 20px;
   -ms-grid-columns: 220px 20px 220px 20px 220px 20px 220px;
+  display: grid;
+  grid-gap: 20px;
   grid-template-columns: repeat(4, 220px);
   margin-bottom: 70px;
 }
@@ -1181,6 +1188,7 @@ img {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  justify-content: flex-start;
   padding: 70px 0;
 }
 
@@ -1232,6 +1240,15 @@ img {
 .services-button-payment {
   -webkit-box-shadow: 0px 1px 0px var(--basic-navy), inset 0px 1px 0px var(--special-button-dark);
           box-shadow: 0px 1px 0px var(--basic-navy), inset 0px 1px 0px var(--special-button-dark);
+  box-shadow: 0px 1px 0px var(--basic-white);
+}
+
+.services-button-guarantee {
+  box-shadow: 0px 1px 0px var(--basic-navy), inset 0px 1px 0px var(--special-button-dark);
+}
+
+.services-button-payment {
+  box-shadow: 0px 1px 0px var(--basic-navy), inset 0px 1px 0px var(--special-button-dark);
 }
 
 .services-button:hover {
